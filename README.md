@@ -1,8 +1,8 @@
 # REMEMBER
 
-A CLI flashcard system based on [ANKI](https://apps.ankiweb.net/), each flashcard was storaged in a file
-but can easy save this on a database or other storage method just implementing a
-new repository
+A CLI flashcard system based on [ANKI](https://apps.ankiweb.net/), each
+flashcard was storaged in a file but can easilly storaged on a database or other
+storage method just implementing a new repository
 
 ### Status
 
