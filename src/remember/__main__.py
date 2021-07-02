@@ -11,7 +11,9 @@ from services import unit_of_work
 from services.handlers import command, query
 
 
-def _store():
+def _store(*args):
+    uow, handler = args
+
     stop = False
 
     while stop is False:
@@ -20,9 +22,11 @@ def _store():
         tags = set()
 
         while True:
-            _input = input("Type tags for you card or press enter to continue: ").lower()
+            _input = input(
+                "Type tags for you card or press enter to continue: "
+            ).lower()
 
-            if _input == '':
+            if _input == "":
                 break
 
             tags.add(_input)
@@ -40,6 +44,7 @@ def _store():
 
         if response == "n":
             stop = True
+
 
 def main(argv):
     uow = unit_of_work.FileUnitOfWork()
@@ -60,7 +65,7 @@ def main(argv):
             print(HELP)
             sys.exit(Exit.SUCCESS.value)
         elif opt == "-s" or opt == "--store":
-            _store()
+            _store(uow, handler)
         elif opt == "-t" or opt == "--tag":
             ...
         else:
