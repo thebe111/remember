@@ -23,15 +23,16 @@ Incompleted
 - [x] clean architecture based
 - [_] tests
 - [_] user configurable options
+- [x] `JSON` based flashcards
 
 ### How to Run
 
 ```shell
 # configure your storage path
-$ vim remember/config.py
+$ vim src/remember/config.py
 
 # execute the program
-$ python remember
+$ python src/remember
 ```
 
 ### Used Technologies
